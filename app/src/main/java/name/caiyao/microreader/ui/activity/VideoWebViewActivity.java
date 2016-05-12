@@ -97,11 +97,7 @@ public class VideoWebViewActivity extends BaseActivity {
         super.onResume();
         try {
             wvVideo.getClass().getMethod("onResume").invoke(wvVideo, (Object[]) null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException|InvocationTargetException|NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
@@ -111,11 +107,7 @@ public class VideoWebViewActivity extends BaseActivity {
         super.onPause();
         try {
             wvVideo.getClass().getMethod("onPause").invoke(wvVideo, (Object[]) null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException|InvocationTargetException|NoSuchMethodException e) {
             e.printStackTrace();
         }
     }

@@ -152,11 +152,7 @@ public class ZhihuStoryActivity extends BaseActivity implements IZhihuStory {
         super.onResume();
         try {
             wvZhihu.getClass().getMethod("onResume").invoke(wvZhihu, (Object[]) null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException|InvocationTargetException|NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
@@ -166,11 +162,7 @@ public class ZhihuStoryActivity extends BaseActivity implements IZhihuStory {
         super.onPause();
         try {
             wvZhihu.getClass().getMethod("onPause").invoke(wvZhihu, (Object[]) null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException|InvocationTargetException|NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
