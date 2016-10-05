@@ -200,11 +200,7 @@ public class WeixinNewsActivity extends BaseActivity {
         super.onResume();
         try {
             wvWeixin.getClass().getMethod("onResume").invoke(wvWeixin, (Object[]) null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException|InvocationTargetException|NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
@@ -214,11 +210,7 @@ public class WeixinNewsActivity extends BaseActivity {
         super.onPause();
         try {
             wvWeixin.getClass().getMethod("onPause").invoke(wvWeixin, (Object[]) null);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException|InvocationTargetException|NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
